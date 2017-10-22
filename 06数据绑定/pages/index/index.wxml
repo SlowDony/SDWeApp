@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 数据绑定 -->
+  <view>{{message}}</view>
+  <!-- 列表渲染 -->
+  <view wx:for="{{array}}" >{{item}}</view>
+
+  <!-- 条件渲染 -->
+  <view wx:if="{{viewname =='webview'}}">webview</view>
+  <view wx:elif="{{viewname=='app'}}">app</view>
+  <view wx:else="{{viewname=='nimi'}}">mini</view>
+
+  <!-- 定义一个模板 -->
+  <template name ="qfname">
+      <view >
+        姓名:{{name}} 年龄:{{age}}
+      </view>
+  </template>
+
+  <!-- 使用一个模板 is ="模板的名字" data 表示数据从哪里来的 -->
+  <template is ="qfname" data ="{{...zhangsan}}"></template>
+  <template is ="qfname" data ="{{...lisi}}"></template>
+
+  <!-- 事件 -->
+  <view bindtap ="add">aaa{{count}}</view>
+</view>
