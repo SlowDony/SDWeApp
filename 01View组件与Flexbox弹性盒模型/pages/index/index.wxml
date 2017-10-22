@@ -1,0 +1,99 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="page-section">
+    <text> text demo</text>
+  </view>
+
+  <view class="page-section">
+    <view>flex-direction :row</view>
+    <view style='display :flex; flex-direction:row'>
+        <view class="flex-item bc-green"></view>
+        <view class='flex-item bc-red'></view>
+        <view class='flex-item bc-blue'></view>
+    </view>
+  </view>
+
+  <view class='page-section'>
+    <view>flex-direction :column</view>
+    <view style='display :flex; flex-direction:column'>
+        <view class="flex-item bc-green"></view>
+        <view class='flex-item bc-red'></view>
+        <view class='flex-item bc-blue'></view>
+    </view>
+  </view>
+
+  <view class='page-section'>
+    <view>justify-content:flex-start</view>
+    <view style='display :flex; flex-direction:row; justify-content:flex-start;'>
+        <view class="flex-item bc-green"></view>
+        <view class='flex-item bc-red'></view>
+        <view class='flex-item bc-blue'></view>
+    </view>
+  </view>
+
+  <view class='page-section'>
+    <view>justify-content:flex-end</view>
+    <view style='display :flex; flex-direction:row; justify-content:flex-end;'>
+        <view class="flex-item bc-green"></view>
+        <view class='flex-item bc-red'></view>
+        <view class='flex-item bc-blue'></view>
+    </view>
+  </view>
+
+
+  <view class='page-section'>
+    <view>justify-content:center</view>
+    <view style='display :flex; flex-direction:row; justify-content:center;'>
+        <view class="flex-item bc-green"></view>
+        <view class='flex-item bc-red'></view>
+        <view class='flex-item bc-blue'></view>
+    </view>
+  </view>
+
+  <view class='page-section'>
+    <view>justify-content:space-between</view>
+    <view style='display :flex; flex-direction:row; justify-content:space-between;'>
+        <view class="flex-item bc-green"></view>
+        <view class='flex-item bc-red'></view>
+        <view class='flex-item bc-blue'></view>
+    </view>
+  </view>
+  <view class='page-section'>
+    <view>justify-content:space-around</view>
+    <view style='display :flex; flex-direction:row; justify-content:space-around;'>
+        <view class="flex-item bc-green"></view>
+        <view class='flex-item bc-red'></view>
+        <view class='flex-item bc-blue'></view>
+    </view>
+  </view>
+
+  <view class='page-section'>
+    <view>align-items:flex-end</view>
+    <view style='display :flex; height :200px ;flex-direction:row; justify-content:space-around;align-items:flex-end'>
+        <view class="flex-item bc-green"></view>
+        <view class='flex-item bc-red'></view>
+        <view class='flex-item bc-blue'></view>
+    </view>
+  </view>
+  
+  <view class='page-section'>
+    <view>align-items:center</view>
+    <view style='display :flex; height :200px ;flex-direction:row; justify-content:space-around;align-items:center'>
+        <view class="flex-item bc-green"></view>
+        <view class='flex-item bc-red'></view>
+        <view class='flex-item bc-blue'></view>
+    </view>
+  </view>
+
+  <view class='page-section'>
+    <view>align-items:flex-start</view>
+    <view style='display :flex; height :200px ;flex-direction:row; justify-content:space-around;align-items:flex-start'>
+        <view class="flex-item bc-green"></view>
+        <view class='flex-item bc-red'></view>
+        <view class='flex-item bc-blue'></view>
+
+    </view>
+  </view>
+
+</view>
+

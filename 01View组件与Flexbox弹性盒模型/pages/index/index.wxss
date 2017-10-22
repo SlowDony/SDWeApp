@@ -1,0 +1,27 @@
+/**index.wxss**/
+.page {
+  flex: 1;
+  background-color: #ff0;
+  font-size:16px;
+}
+
+.page-section{
+  padding: 10px;
+  background-color: #f0f;
+  margin: 10px;
+  font-size: 16px;
+}
+.flex-item{
+  width: 100px;
+  height: 100px;
+
+}
+.bc-green{
+  background-color: #00ff00;
+}
+.bc-red{
+  background-color: #ff0000;
+}
+.bc-blue{
+  background-color: #0000ff;
+}
