@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+ <button size= "mini">小按钮</button> 
+ <button size= "default" type="warn">默认警告按钮</button>
+ <button size= "default" type="warn" plain = "true">默认警告按钮</button> <!--默认警告按钮plain是空心的 -->
+ <button size= "default" type="primary" disabled="true"> 默认按钮不可点击</button>
+ <button size= "default" type="primary" loading= "true"> 默认按钮加载中</button>
+ <button size= "default" type="primary" bindtap= "doLoading"> 点击事件的按钮</button>
+</view>
