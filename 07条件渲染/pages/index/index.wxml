@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view wx:if="{{length >5}}"> 大于5</view>
+  <view wx:else>小于等于5</view>
+
+  <view>{{"hello"+name}}</view>
+
+  <block wx:if="{{isShow? true : false}}">
+    <view>view0</view>
+    <view>view1</view>
+  </block>
+
+  <view hidden = "true" id="abc" style="display: none;">view2</view> 
+  <!-- 
+  wx:if 懒渲染laze render 一般初始化时候判断 (只执行一次时用)
+  hidden/display:none 渲染但是不是显示 频繁切换使用  (频繁使用时用)
+   -->
+</view>
