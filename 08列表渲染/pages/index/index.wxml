@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+
+<!-- items是数组 index 是数组下标  item 是每一项 -->
+  <view wx:for="{{items}}">
+    {{"intex:"+index}} === {{"message:"+item.message}}
+  </view>
+<!-- 用idx 替换缺省的index 用myItem 替换缺省的item  -->
+  <view>------------------</view>
+  <view wx:for="{{items}}" wx:for-index ="idx" wx:for-item = "myItem">
+    {{"intex:"+idx}} === {{"message:"+myItem.message}}
+  </view>
+
+  <!-- 九九乘法表 -->
+  <view wx:for = "{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item ="i">
+    <view wx:for = "{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item = "j">
+      {{i}}*{{j}} ={{i*j}}
+    </view>
+  </view>
+
+  <block wx:for = "{{[1,2,3]}}">
+    <view>index:{{index}}</view>
+    <view>item:{{item}}</view>
+  </block>
+</view>
