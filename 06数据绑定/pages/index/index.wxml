@@ -1,7 +1,10 @@
 <!--index.wxml-->
 <view class="container">
+
+  
   <!-- 数据绑定 -->
   <view>{{message}}</view>
+
   <!-- 列表渲染 -->
   <view wx:for="{{array}}" >{{item}}</view>
 
