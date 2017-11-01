@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+ <!-- 定义一个模板 -->
+ <template name="myTemplate">
+   <view>
+      <text> name: {{name}} age:{{age}}</text>
+      <text> addr: {{addr}} </text> 
+   </view>
+ </template>
+
+ 1<view class="section">使用模板 is表示使用的模板名字</view>
+ <template is = "myTemplate" data ="{{name :'xiaoming',age:12,addr :'yige'}}"></template>
+ <!-- x,y,z三个变量是js代理里得到的 -->
+ 2<view class="section">x,y,z三个变量是js代理里得到的</view>
+ <template is = "myTemplate" data = "{{name:x,age:y,addr:z}}" ></template>
+
+ 3<view class="section">三个变量和参数一样可以省略不写</view>
+ <template is = "myTemplate" data ="{{name,age,addr}}"></template>
+
+  4<view class="section">...+一个对象</view>
+ <template is = "myTemplate" data ="{{...obj1}}"></template>
+
+ 5 <view class="section">...+一个数组指定一个元素</view>
+ <template is = "myTemplate" data ="{{...arr[0]}}"></template>
+
+ 6<view class="section">for循环</view>
+ <view wx:for="{{arr}}">
+    <template is = "myTemplate" data ="{{...arr[index]}}"></template>
+ </view>
+ 
+
+
+
+</view>

@@ -1,0 +1,6 @@
+/**index.wxss**/
+.section{
+	background-color: #882222;
+	font-size:12px;
+
+}
