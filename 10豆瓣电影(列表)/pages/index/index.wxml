@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="tablist" wx:for="{{list}}">
+  <view class="view">
+
+    <view class="view-left">
+      <image src="{{item.images.large}}" mode="aspectFit"></image>
+    </view>
+
+    <view class="view-right">
+      <view class="title">{{item.title}}</view>
+      <view class="detile">
+        导演:
+        <text wx:for="{{item.directors}}" wx:for-item="dicectors">{{dicectors.name}}</text>
+      </view>
+      <view class="detile">
+        演员:
+        <text wx:for="{{item.casts}}" wx:for-item="casts">{{casts.name}}/</text>
+      </view>
+    </view>
+  </view>
+  <view class="view-line"></view>
+</view>

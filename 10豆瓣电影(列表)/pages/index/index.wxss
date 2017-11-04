@@ -1,0 +1,48 @@
+/**index.wxss**/
+
+.tablist {
+  width: 100%;
+  background-color: #fff;
+  /* outline-width:0.1rpx;
+  outline-color:#001100;
+  outline-style:solid;dashed:虚线* dotted:细虚线 double:2倍 */
+}
+.view{
+   display: flex;
+}
+.view-left {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #fff;
+}
+
+.view-left image {
+  width: 200rpx;
+  height: 200rpx;
+  float: left;
+  /* position: fixed; */
+  padding: 10px 0px;
+}
+
+.view-right {
+  padding: 10px 0px;
+  width: 500rpx;
+  height: 200rpx;
+  background-color: #fff; /*背景色 */
+  font-size: 10px; /*字体大小*/
+  color: #120011; /*字体颜色*/
+  letter-spacing: 2px; /*字符间距*/
+  vertical-align: 30px; /*设置元素的垂直对齐*/
+  text-align: left; /*对齐元素中的文本*/
+  text-decoration: none; /*向文本添加修饰 underline:下/overline:上/line-through: 穿过。blink:闪烁的一条线。*//* line-height:15px; 设置行高 */
+}
+
+.title {
+  font-size: 20px;
+}
+
+.view-line {
+  width: 100%;
+  height: 0.5px;
+  background-color: #E6EAF2;
+}
