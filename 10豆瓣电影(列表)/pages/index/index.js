@@ -6,17 +6,38 @@ var api = require('../../utils/api.js');
 Page({
   data: {
     pn: 1,
-    list: []
+    list: [],
+    showloding:true,
+    showmore:true
+  },
+  scrolltolower:function(e){
+      if (!this.data.showmore)return;
+      this.loadData(this.data.pn);
+      // console.log(1111)
+  },
 
+  loadData:function(pn){
+     api.getList('in_theaters', pn)
+      .then(res => {
+        console.log(res);
+        if (res.subjects.length>0) {
+             this.setData({
+               list: this.data.list.concat(res.subjects),
+             showloding:false,
+             pn:pn+1
+             })
+        }else
+        {
+            this.setData({
+                showmore:false
+            })
+        }
+       
+      })
   },
   onLoad: function (options) {
     // body...
-    api.getList('in_theaters', this.data.pn)
-      .then(res => {
-        console.log(res);
-        this.setData({
-          list: res.subjects
-        })
-      })
+    this.loadData(this.data.pn);
+   
   }
 })
