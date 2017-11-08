@@ -1,0 +1,7 @@
+/* pages/details/details.wxss */
+.images image{
+  width: 100%;
+}
+.deteil{
+  font-size: 12px;
+}

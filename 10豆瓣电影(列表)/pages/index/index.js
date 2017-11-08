@@ -5,7 +5,7 @@ var api = require('../../utils/api.js');
 
 Page({
   data: {
-    pn: 1,
+    pn: 0,
     list: [],
     showloding:true,
     showmore:true
@@ -15,7 +15,13 @@ Page({
       this.loadData(this.data.pn);
       // console.log(1111)
   },
-
+  
+  redirect:function(e){
+   var id = e.currentTarget.dataset.id;
+   wx:wx.navigateTo({
+     url: '../details/details?id='+id,
+   })
+  },
   loadData:function(pn){
      api.getList('in_theaters', pn)
       .then(res => {

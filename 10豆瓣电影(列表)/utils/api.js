@@ -19,7 +19,11 @@ module.exports = {
 	getList:function(type,pn=0,count=20){
 	   return coming_soonApi(type,{"start":pn*count,"count":count})
 			  .then(res=>res.data)
-	}
+	},
+  getDetail:function(id){
+      return coming_soonApi("/subject/"+id)
+        .then(res=>res.data)
+  }
 }
 
 

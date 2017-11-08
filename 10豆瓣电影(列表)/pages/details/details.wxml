@@ -1,0 +1,11 @@
+<!--pages/details/details.wxml-->
+<view class="images">
+  <image src='{{list.images.large}}'>
+  </image>
+</view>
+<view class="deteil">  
+  <view class="title">剧情简介</view>
+  <text>
+   {{list.summary}} 
+  </text>
+</view>
