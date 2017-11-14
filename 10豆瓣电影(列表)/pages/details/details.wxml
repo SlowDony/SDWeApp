@@ -1,6 +1,6 @@
 <!--pages/details/details.wxml-->
 <view class="images">
-  <image src='{{list.images.large}}'>
+  <image src='{{list.images.large}}' mode ="aspectFit">
   </image>
 </view>
 <view class="deteil">  
