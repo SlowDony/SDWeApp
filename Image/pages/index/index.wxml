@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="imageView" style="width: {{screenWidth-80}}px;height: {{(screenWidth-80)*3/4}}px;">
+    <block wx:if="{{imageSrc}}">
+      <image src="{{imageSrc}}" class="image" mode="scaleToFill" bindtap="chooseImage" style="width: {{screenWidth-80}}px;height: {{(screenWidth-80)*3/4}}px;"></image>
+    </block>
+    <block wx:else>
+      <view class="weui-uploader__input-box">
+        <view class="weui-uploader__input" bindtap="chooseImage"></view>
+      </view>
+    </block>
+  </view>
+  <view class="textarea-wrp" >
+    <textarea placeholder="请输入你要说的文字" bindblur="bindTextAreaBlur" style="width: {{screenWidth-80}}px;height: {{screenHeight -130-((screenWidth-80)*3/4+80)}}px;" />
+  </view>
+  <view class="settingBJ"  >设置背景色
+    <view>
+      <text>R</text>
+      <view>
+      <slider bindchange='setRed' step="0" min="0" max="255" show-value backgroundColor="#FF0000" activeColor="#FF0000" step="1"/>
+      </view>
+    </view>
+     <view>
+      <text>G</text>
+      <view>
+      <slider bindchange='setGreen' step="0" min="0" max="255" show-value backgroundColor="#00FF00" activeColor="#00FF00" step="1"/>
+      </view>
+    </view>
+     <view>
+      <text>B</text>
+      <view>
+      <slider bindchange='setBlue' step="0" min="0" max="255" show-value backgroundColor="#0000FF" activeColor='#0000FF'  step="1"/>
+      </view>
+    </view>
+
+  
+  </view>
+  示例颜色
+  <view class="demoColor" style=" width:50px ;height:50px ;background-color:rgb({{red}},{{green}}, {{blue}})">
+    
+    </view>
+  <view class="settingFont">设置字体</view>
+</view>
+
+
+
+<button type="primary" class="mini-btn" bindtap='drawImage'>生成海报</button>
+
+<canvas class='canvas-element' canvas-id='canvas' style="width: {{screenWidth}}px;height: {{screenHeight}}px;" bindtap='previewImage'>
+</canvas>

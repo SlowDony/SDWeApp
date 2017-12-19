@@ -1,0 +1,108 @@
+/**index.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: space-between;
+  font-size: 32rpx;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+ .weui-uploader__input-box {
+  float: left;
+  position: relative;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  width: 77px;
+  height: 77px;
+  border: 1px solid #D9D9D9;
+} 
+.weui-uploader__input-box {
+  float: left;
+  position: relative;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  width: 77px;
+  height: 77px;
+  border: 1px solid #D9D9D9;
+}
+ .weui-uploader__input-box:before,
+.weui-uploader__input-box:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #D9D9D9;
+} 
+ .weui-uploader__input-box:before {
+  width: 2px;
+  height: 39.5px;
+}
+.weui-uploader__input-box:after {
+  width: 39.5px;
+  height: 2px;
+} 
+ .weui-uploader__input-box:active {
+  border-color: #999999;
+}
+.weui-uploader__input-box:active:before,
+.weui-uploader__input-box:active:after {
+  background-color: #999999;
+} 
+ .weui-uploader__input {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+} 
+ textarea {
+    /* padding: 0px; */
+  /* top: 0px;
+	bottom: 40px;
+	left: 40px; 
+	right: 80px; 
+  margin-right: 40px; */
+  /* background-color: #990022;   */
+   /* border: 1px solid #D9D9D9;  */
+  /* font-size: 24; */
+  margin: 0px 40px 0px 40px; 
+} 
+.textarea-wrp {
+  display: flex;
+  /* color: #ffff00; */
+  font-size: 24px;
+  /* padding: 0px 0px 0px 0px;   */
+  /* background-color: #009900;  */
+  /* width: 100%; */
+  
+    
+}
+
+.imageView{
+  display: flex;
+  /* width: 80%; */
+  height: 40%;
+  padding: 40px
+}
+ 
+ .mini-btn{
+   width: 120px;
+
+ }
+ .canvas-element{
+   padding: 0px 0px 0px 0px; 
+  
+ }
+ .settingBJ{
+   width: 100%;
+
+ }
+ .demoColor{
+   width: 40%;
+   height: 30;
+ }
+ 
