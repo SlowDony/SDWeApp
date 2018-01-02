@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp()
 // var imageSrc;
+
 Page({
   data: {
     imageUrls: [],
@@ -9,9 +10,12 @@ Page({
     textView:"",
     screenWidth:"",
     screenHeight:"",
-    red:"0",
-    green:"0",
-    blue:"0",
+    red:"255",
+    green:"255",
+    blue:"255",
+    fontsize:"15",
+    fontColor: "#353535",
+    fontColorbj:"#ffffff",
   },
   
   onLoad: function (options) {
@@ -29,6 +33,30 @@ Page({
         
         // 这里的单位是PX，实际的手机屏幕有一个Dpr，这里选择iphone，默认Dpr是2
       }
+    })
+  },
+  //字体颜色选择
+  radioChange:function(e){
+  console.log("选择的字体颜色"+e.detail.value);
+      this.setData({
+        fontColor: e.detail.value
+      });
+      if (e.detail.value ==("#ffffff")){
+        
+        this.setData({
+          fontColorbj: "#353535"
+        });
+     }else{
+        this.setData({
+          fontColorbj: "#ffffff"
+        });
+     }
+
+  },
+  //设置字体大小
+  setFontSize:function(e){
+    this.setData({
+      fontsize: e.detail.value
     })
   },
   //设置背景色
@@ -63,9 +91,10 @@ Page({
   setText: function (context) {
     var text = this.data.textView;
     console.log(text);
-    context.setFontSize(24);
+    
+    context.setFontSize(this.data.fontsize);
     // context.setFillStyle("#FFF3D2");
-    context.setFillStyle("#272727");
+    context.setFillStyle(this.data.fontColor);
     context.fillText(text, 40, ((this.data.screenWidth - 80) * 3 / 4 + 100));
     // context.fillText(text, 100,100);
     context.stroke();
@@ -76,7 +105,7 @@ Page({
     var bottomTitle = '<史姑娘>';
     // context.setTextAlign("center");
     context.setFontSize(12);
-    context.setFillStyle("#272727");
+    context.setFillStyle(this.data.fontColor);
     context.fillText(bottomTitle, this.data.screenWidth/2-30, this.data.screenHeight-40);
     // context.stroke();
   },
@@ -87,10 +116,15 @@ Page({
     var context = wx.createCanvasContext("canvas");
     var path = this.data.imageSrc;
     var erImagePath = "../image/erImage.png"
-    context.setFillStyle('#ffffff');
+    // context.setFillStyle('#ffffff');
+    // context.setFillStyle("rgb(,22, 122)");
     // console.log(this.data.red);
-    // var red = this.data.red;
-    // context.setFillStyle("rgb(red, 255, 0)");
+    var red = this.data.red;
+    var green =this.data.green;
+    var blue = this.data.blue;
+    var bjcolor = "rgb("+ red + "," + green + "," + blue + ")";
+    context.setFillStyle(bjcolor);
+
     context.fillRect(0, 0, that.data.screenWidth, that.data.screenHeight);
     console.log(that.data.screenWidth) ; //625
     console.log(that.data.screenHeight) ;
